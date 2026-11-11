@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel Viviani - Portfólio</title>
+<meta name="description" content="Portfólio de Daniel Viviani, Tech Lead Full Stack e IA: ERP sob medida, CRM, agentes de IA, apps mobile, BI e projetos pessoais.">
+<style>
+  :root{
+    --bg:#f6f7fb; --surface:#ffffff; --ink:#14171f; --mut:#566070; --line:#dfe3ea;
+    --acc:#1f4fd8; --acc-soft:#e7eefc; --ok:#17794a; --warn:#a15c00;
+    --shadow:0 1px 2px rgba(16,24,40,.06),0 2px 6px rgba(16,24,40,.06);
+  }
+  :root:not([data-theme="light"]){ }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0f1218; --surface:#171b24; --ink:#e8ebf2; --mut:#9aa4b5; --line:#2a303c;
+      --acc:#7ca2ff; --acc-soft:#1c2740; --ok:#4cc38a; --warn:#f0b35a; color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0f1218; --surface:#171b24; --ink:#e8ebf2; --mut:#9aa4b5; --line:#2a303c;
+    --acc:#7ca2ff; --acc-soft:#1c2740; --ok:#4cc38a; --warn:#f0b35a; color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  a{color:var(--acc)}
+  header.top{background:var(--surface);border-bottom:1px solid var(--line)}
+  .hero{padding:44px 0 28px}
+  .hero h1{margin:0;font-size:clamp(28px,5vw,42px);letter-spacing:-.02em}
+  .hero .role{font-size:clamp(17px,2.6vw,21px);color:var(--acc);font-weight:600;margin:6px 0 12px}
+  .hero p{max-width:760px;color:var(--mut);margin:8px 0}
+  .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .links a,.btn{display:inline-block;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:7px 13px;border-radius:8px;text-decoration:none;font-size:14px;cursor:pointer}
+  .links a:hover,.btn:hover{border-color:var(--acc);color:var(--acc)}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:22px 0 4px}
+  .stat{background:var(--acc-soft);border-radius:10px;padding:12px 14px}
+  .stat b{display:block;font-size:24px;letter-spacing:-.02em}
+  .stat span{font-size:13px;color:var(--mut)}
+  nav.filters{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0;border-bottom:1px solid var(--line)}
+  nav.filters .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:6px 12px;border-radius:999px;font-size:13.5px;cursor:pointer}
+  .chip[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#fff}
+  #q{flex:1;min-width:160px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:7px 12px;border-radius:8px;font-size:14px}
+  main{padding:22px 0 60px}
+  h2.sec{font-size:20px;margin:30px 0 4px;letter-spacing:-.01em}
+  p.secsub{margin:0 0 12px;color:var(--mut);font-size:14.5px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px 16px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:6px}
+  .card.feat{grid-column:1/-1;border-left:5px solid var(--acc)}
+  .card h3{margin:0;font-size:17px;line-height:1.3}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:11.5px;padding:2px 8px;border-radius:999px;background:var(--acc-soft);color:var(--acc);font-weight:600}
+  .tag.p{background:#fff1dc;color:#8a4b00}
+  .tag.o{background:#e5f6ec;color:#17673f}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .tag.p{background:#3a2a10;color:#f0b35a} :root:not([data-theme="light"]) .tag.o{background:#12301f;color:#4cc38a} }
+  :root[data-theme="dark"] .tag.p{background:#3a2a10;color:#f0b35a}
+  :root[data-theme="dark"] .tag.o{background:#12301f;color:#4cc38a}
+  .card p{margin:2px 0;font-size:14.5px}
+  .stack{font-size:12.8px;color:var(--mut)}
+  .state{font-size:12.8px;color:var(--warn)}
+  details{margin-top:4px}
+  summary{cursor:pointer;color:var(--acc);font-size:14px;font-weight:600}
+  details ul{margin:6px 0 4px 18px;padding:0;font-size:14px}
+  details li{margin:3px 0}
+  .flow{display:flex;flex-wrap:wrap;gap:6px;align-items:stretch;margin:8px 0}
+  .box{flex:1 1 110px;border:1px solid var(--acc);border-radius:8px;padding:6px 8px;font-size:12.5px;text-align:center;background:var(--surface)}
+  .arr{align-self:center;color:var(--acc);font-weight:700}
+  figure.shot{margin:6px 0;border:1px solid var(--line);border-radius:8px;overflow:hidden;max-height:340px;position:relative}
+  figure.shot img{width:100%;display:block;object-position:top;object-fit:cover;max-height:300px}
+  figure.shot figcaption{font-size:12px;color:var(--mut);padding:4px 8px;background:var(--surface)}
+  .empty{display:none;padding:30px;text-align:center;color:var(--mut)}
+  footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--mut);font-size:13.5px}
+  .theme{margin-left:auto}
+  table.t{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0}
+  table.t td,table.t th{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}
+  table.t th{background:var(--acc-soft)}
+  .tw{overflow-x:auto}
+  @media print{ nav.filters,.theme{display:none} details{display:block} details>*{display:block} .card{break-inside:avoid;box-shadow:none} }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap hero">
+    <h1>Daniel Schincaglia Viviani</h1>
+    <div class="role">Tech Lead Full Stack &amp; Inteligência Artificial</div>
+    <p>15 anos construindo software que opera de verdade: ERP sob medida para distribuição e varejo, CRM com WhatsApp, apps mobile, BI e, mais recentemente, agentes de IA integrados a sistemas reais. Uso IA onde ela agrega, código determinístico onde precisa de exatidão e aprovação humana onde há risco.</p>
+    <p>Nomes de clientes e dados internos foram omitidos. Código de projetos de clientes é privado e pode ser demonstrado sob NDA.</p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/danielviviani/">LinkedIn</a>
+      <a href="mailto:contato.danielviviani@gmail.com">contato.danielviviani@gmail.com</a>
+      <button class="btn theme" id="themeBtn" type="button" aria-label="Alternar tema claro/escuro">Tema</button>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<nav class="filters" aria-label="Filtros">
+  <div class="wrap">
+    <div class="row" id="chips"></div>
+    <div class="row" style="margin-top:8px"><input id="q" type="search" placeholder="Buscar por tecnologia ou assunto (ex.: Delphi, NestJS, NF-e, agente)" aria-label="Buscar"></div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div id="out"></div>
+  <div class="empty" id="empty">Nenhum projeto encontrado para esse filtro.</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Como eu trabalho:</b> especificação viva (SDD) antes do código, TDD com testes de segurança, CI/CD em estágios rápidos, regras do projeto em CLAUDE.md, auditoria e limite de custo nos agentes, memória compartilhada da equipe com ai-memory.</p>
+    <p>Feito em HTML estático, sem dependências. Última atualização: Nov/2026.</p>
+  </div>
+</footer>
+
+<noscript><div class="wrap"><p>Ative o JavaScript para ver a lista interativa de projetos, ou leia o README.md deste repositório.</p></div></noscript>
+
+<script>
+"use strict";
+/* ---------- dados ---------- */
+var CATS = [
+  ["todos","Todos"],["destaque","Destaques"],["ia","Agentes e IA"],["web","Web e SaaS"],
+  ["erp","ERP e fiscal"],["mobile","Mobile"],["dados","Dados e BI"],["oss","Open source"],["pessoal","Pessoais e voluntariado"]
+];
+var KIND = {pro:["Profissional",""],pes:["Pessoal","p"],oss:["Open source","o"]};
+
+var P = [
+/* ---------------- DESTAQUES ---------------- */
+{id:"agente-erp",cats:["destaque","ia","erp"],kind:"pro",feat:true,
+ t:"Agente de IA integrado a um ERP legado (cadastros e NF-e)",
+ s:"Um agente que vive dentro do ERP, não ao lado dele. O usuário pede na própria tela do sistema (cadastro de cliente por CNPJ/CPF, análise de pedido antes da emissão de NF-e) e o agente devolve uma proposta com a fonte de cada campo; a pessoa confere, edita e aprova.",
+ flow:["Tela no ERP (Delphi 7)","Fila no banco","Agente na nuvem (Node.js + Claude)","Proposta com fontes","Aprovação humana","Gravação + auditoria"],
+ b:["Ferramentas de escopo fechado: o agente não acessa o banco livremente, só campos de uma lista permitida.",
+    "Três níveis de autonomia: só análise, correção com aprovação e autônomo apenas para classes de correção comprovadas pelo histórico.",
+    "Auditoria somente-inserção (passo, alteração, fonte, aprovador) e checagem de conflito: se o valor mudou desde que o agente o viu, não altera.",
+    "Bloqueio na emissão de NF-e para cliente genérico, CPF/CNPJ inválido ou cadastro incompleto, com histórico de cada tentativa (cStat, protocolo, XMLs).",
+    "Um repositório de agente atende vários ERPs por \"packs\" (regime, empresas, campos alteráveis).",
+    "Regra de produto: a mensagem ao usuário nunca culpa o sistema; o agente fala como parte dele."],
+ stack:"Node.js, Delphi 7, Zeos, MySQL, Claude, Docker, GitHub Actions",
+ state:"Em desenvolvimento por etapas. O lado Delphi compila no projeto completo e a gravação de cliente foi testada contra MySQL local; a tela ainda será validada na IDE com o agente rodando."},
+
+{id:"hub",cats:["destaque","ia"],kind:"pro",feat:true,
+ t:"Hub de 19 agentes de trabalho (Telegram, Claude Code, CI/CD)",
+ s:"Um serviço único que executa agentes por agenda ou sob demanda. Cada agente é uma pasta com agent.json (comando, cron, timeout, ferramentas permitidas, se exige aprovação) e, quando usa IA, um CLAUDE.md com as regras.",
+ flow:["Telegram","Hub Node.js","Agente (script ou LLM)","Aprovação por botão","Ação externa","Custo registrado"],
+ b:["IA só onde agrega: 4 dos 19 agentes usam LLM; o restante é script puro, com custo zero.",
+    "Comercial: prospecção a frio com rascunho por empresa (nada sai sem aprovação), e-mail em lote com freio de bounces, propostas de freelas, Google Ads (relatório e negativação), conteúdo para Instagram.",
+    "Orçamento de projetos: a IA conversa e estima horas e tokens; o preço é calculado por código e gera dois PDFs (cliente e conta interna).",
+    "Licitações: busca no PNCP sem IA e IA só no detalhamento de cada edital; versão para Portugal com a terminologia do código de contratos públicos.",
+    "Segurança: chamadas ao Claude sem ferramentas e sem sessão, teto de orçamento por resposta, texto de terceiros tratado como dado (anti prompt injection), segredos fora do código.",
+    "Qualidade: 25 arquivos de teste (node:test); o CI valida sintaxe, JSON e testes e só então faz build da imagem (GHCR) e deploy na VPS, fixando o SHA do commit. 108 commits em duas semanas."],
+ stack:"Node.js (grammY), Python, Claude Code CLI, Docker, GitHub Actions, GHCR, PostgreSQL, Amazon SES, PNCP",
+ state:"Em uso."},
+
+{id:"crm",cats:["destaque","web","ia"],kind:"pro",feat:true,
+ t:"CRM multi-tenant com WhatsApp e agente de IA de enriquecimento",
+ s:"Plataforma de CRM em produção, com cerca de 500 conversas por mês e mais de 30 clientes ativos. Caixa de entrada WhatsApp em tempo real (Evolution API + WebSocket), Kanban, timeline de atividades, dashboards e prospecção integrada à base da Receita Federal.",
+ flow:["Next.js","API NestJS","PostgreSQL / Redis","Evolution API (WhatsApp)","Fila BullMQ","Agente de IA"],
+ b:["RBAC em três perfis, isolamento por organização e verificação de tenant em toda requisição (prevenção de IDOR).",
+    "Mesclagem de contatos e conversas duplicadas com preservação do histórico; anexos, respostas encadeadas e status de entrega.",
+    "Prospecção: base da Receita Federal e base de Dívida Ativa, com ativação em lote e conexão somente leitura (menor privilégio).",
+    "Agente de enriquecimento de leads em pipeline híbrido: coleta determinística (domínio, web search, redes sociais) e depois LLM consolidador com tool-use limitado.",
+    "Fila BullMQ com retry exponencial e idempotência de 24 h, limite de orçamento por execução, provedores configuráveis por tenant (Anthropic/OpenAI; Tavily/Brave) e dados externos delimitados contra prompt injection.",
+    "Documentação viva (SDD) como fonte de verdade; 218 commits desde Abr/2026."],
+ stack:"NestJS, Next.js, TypeScript, Prisma, PostgreSQL, Redis, BullMQ, Socket.io, Docker, GitHub Actions",
+ state:"Em produção."},
+
+{id:"sinais",cats:["destaque","erp","mobile","web"],kind:"pro",feat:true,
+ t:"Ecossistema para distribuidora de alimentos: ERP, apps de venda, entrega e separação, painel web e API",
+ s:"Projeto de grande porte para uma distribuidora de alimentos que trabalha com várias indústrias. Um ERP em Delphi no centro, uma API em AdonisJS/MySQL e aplicativos que funcionam offline no campo e sincronizam com o ERP.",
+ flow:["ERP Delphi (MySQL)","API AdonisJS","Sincronização","App de vendas","App de entregas","App de separação","Painel web React"],
+ b:["ERP com cerca de 480 unidades de código e 177 mil linhas de Delphi: pedidos de venda e compra, estoque, inventário, etiquetas, comissão e bonificação de vendedores, premiação, positivação de clientes.",
+    "Relações com as indústrias: acordos comerciais, verbas, promoções da indústria, custo futuro e objetivos de venda, com fluxos de aprovação por alçada e senhas.",
+    "Logística: roteirização e ordem de entrega, monitoramento de entregas, motoristas e veículos, canhoto eletrônico, baixa de entrega e coletor de dados.",
+    "Fiscal e financeiro: NF-e, CT-e (emissão, cancelamento, inutilização), SAT, SPED Fiscal e Bloco K, contas a pagar e a receber, fluxo de caixa, DRE e planejamento orçamentário.",
+    "Cobrança: geração de remessa e leitura de retorno para cerca de 20 bancos.",
+    "App de vendas (React Native/Expo, TypeScript): pedido, itens, promoções, contas a receber, sincronização, funcionamento offline com SQLite.",
+    "App de entregas: ordem de entrega, checkout com comprovação, sincronização. App de separação: conferência com leitura de código de barras.",
+    "Painel web (React/TypeScript): dashboard, acordos comerciais, promoções, edição de custo de produto. API REST em AdonisJS com controllers de pedido, cliente, entrega, roteiro, representante, promoção, acordo comercial e sincronização."],
+ stack:"Delphi 7, MySQL, ACBr, AdonisJS, React Native (Expo), TypeScript, React, SQLite",
+ state:"Em operação e evolução desde 2020."},
+
+/* ---------------- IA ---------------- */
+{id:"orcamento",cats:["ia"],kind:"pro",
+ t:"Agente de orçamento de projetos",
+ s:"Conversa pelo Telegram até chegar a um consenso de escopo e gera dois PDFs: o do cliente (escopo, investimento e três formas de pagamento) e a conta interna (piso, tabela e desconto máximo).",
+ b:["A IA estima horas e tokens por etapa por analogia com projetos anteriores; o preço é calculado por código (horas, risco, custo de IA, margem), nunca pelo modelo.","Projetos salvos e versionados (v1, v2...), com fases e MVP."],
+ stack:"Node.js, Python, Claude, geração de PDF",state:"Em uso."},
+{id:"licitacoes",cats:["ia"],kind:"pro",
+ t:"Análise de licitações do Brasil e de Portugal",
+ s:"Busca editais de software no PNCP sem IA e, a pedido, detalha cada edital com IA para uma decisão GO/NO-GO. Há uma variante para concursos públicos de TIC em Portugal.",
+ b:["Triagem rápida de requisitos eliminatórios antes da análise completa.","Registro de lições aprendidas lido no início de cada análise, para não repetir erros.","Consumo de tokens registrado por licitação."],
+ stack:"Node.js (ESM), Claude, API do PNCP",state:"Em uso."},
+{id:"prospeccao",cats:["ia","dados"],kind:"pro",
+ t:"Prospecção a frio com base da Receita Federal",
+ s:"Seleciona empresas na base pública da Receita por CNAE, região e tempo de abertura, descarta e-mails de contador e inválidos, e prepara o contato. Nada sai sem aprovação e envio por botão.",
+ b:["Dois modos: lote com modelo fixo e e-mail escrito para cada empresa estabelecida.","Integração com Amazon SES, lista de supressão e freio de reputação."],
+ stack:"Python, PostgreSQL, Amazon SES, Claude",state:"Em uso."},
+{id:"mcp-financas",cats:["ia","pessoal"],kind:"pes",
+ t:"Servidor MCP de gestão financeira pessoal",
+ s:"Servidor de lógica de negócio, via Model Context Protocol, de um agente de finanças pessoais acessado por Telegram/WhatsApp através de um gateway em Go.",
+ b:["Separação clara: o gateway cuida do canal; o servidor expõe as ferramentas de negócio."],
+ stack:"Python, MCP, Docker, PicoClaw (Go)",state:"Protótipo."},
+{id:"telegram-bridge",cats:["ia"],kind:"pro",
+ t:"Ponte Telegram para o Claude Code",
+ s:"Bot que encaminha mensagens ao Claude Code CLI, com sessões, modos de chamada e integração com squads de agentes.",
+ b:["Autenticação por token OAuth da conta, lista de chats permitidos e execução em Docker."],
+ stack:"Python, Docker, Claude Code CLI, Telegram",state:"Em uso."},
+{id:"squads",cats:["ia","oss"],kind:"pes",
+ t:"Squads de agentes para criação de conteúdo",
+ s:"Uso do framework aberto OpenSquad para montar equipes de agentes (pesquisa, redação, revisão) que produzem conteúdo social, com escritório virtual para acompanhar a execução.",
+ stack:"OpenSquad, Claude Code",state:"Experimentos."},
+{id:"memoria",cats:["ia"],kind:"pro",
+ t:"Memória compartilhada de equipe com ai-memory",
+ s:"Uso o ai-memory em equipe para que decisões, regras e armadilhas dos projetos não se percam entre pessoas, sessões e ferramentas.",
+ b:["Capturas do ciclo de vida do agente viram páginas em markdown versionado em git (decisões, regras, gotchas, procedimentos), consultáveis via MCP.","Servidor único para o time, com contas por pessoa, atribuição e auditoria; acesso por projeto.","Handoff entre sessões e agentes, mensagens entre projetos e perfil de preferências que vale em projetos novos.","Captura sanitizada e regras de exclusão para o que nunca deve entrar na memória."],
+ stack:"ai-memory, MCP, Claude Code, git",state:"Em uso."},
+
+/* ---------------- WEB / SaaS ---------------- */
+{id:"mkt-hub",cats:["web","erp"],kind:"pro",
+ t:"Integração de marketplaces (MVP Mercado Livre)",
+ s:"SaaS multi-tenant que centraliza a operação de vendas em marketplaces. Expõe uma API para que ERPs enviem estoque e preço e recebam pedidos e perguntas.",
+ b:["OAuth 2.0 com rotação segura de tokens e processamento de webhooks.","Agente local em Delphi para ligar ERPs legados à API.","Projeto guiado por SDD e TDD."],
+ stack:"NestJS, Next.js, TypeScript, Delphi, PostgreSQL",state:"MVP em desenvolvimento."},
+{id:"precificacao",cats:["web"],kind:"pro",
+ t:"SaaS de precificação para confeiteiras",
+ s:"Produto para microempreendedoras formarem preço correto de receitas e produtos a partir de despesas fixas e variáveis, faturamento e percentuais.",
+ b:["Especificação técnica escrita para orquestrar o desenvolvimento por agentes.","Monorepo com NestJS e Next.js."],
+ stack:"NestJS, Next.js, Turborepo, Prisma, PostgreSQL",state:"Especificação e MVP."},
+{id:"fire",cats:["web","pessoal"],kind:"pes",
+ t:"SaaS de planejamento financeiro e independência financeira (FIRE)",
+ s:"Projeção de patrimônio, metas e acompanhamento mensal, com motor de cálculo determinístico.",
+ b:["Monorepo Turborepo: back-end NestJS + Prisma + PostgreSQL e front-end Next.js com Shadcn/UI e Recharts.","Documento de especificação versionado como fonte de verdade (versão 4.35.1)."],
+ stack:"NestJS, Next.js, Prisma, PostgreSQL, Docker",state:"Em desenvolvimento."},
+{id:"restaurante",cats:["web"],kind:"pes",
+ t:"Plataforma de cardápio e pedidos online para restaurantes",
+ s:"Painel da equipe (web responsivo, instalável como app) com cardápio, fotos, complementos e disponibilidade por dia, e cardápio público por restaurante onde o cliente faz o pedido sem criar conta e acompanha o status por link.",
+ b:["Multi-restaurante: cada restaurante enxerga apenas os próprios dados."],
+ stack:"NestJS, Next.js, PostgreSQL, Redis, Docker",state:"Em desenvolvimento."},
+{id:"sites",cats:["web"],kind:"pro",
+ t:"Sites e landing pages",
+ s:"Site institucional, catálogo de autopeças, página de software sob medida e landing page do CRM.",
+ b:["Next.js e HTML/CSS com Docker e CI/CD que só dispara quando a pasta do site muda.","Design com Tailwind e Shadcn/UI."],
+ stack:"Next.js, HTML/CSS/JS, Nginx, Docker, GitHub Actions",state:"No ar."},
+{id:"catalogo",cats:["web","dados","ia"],kind:"pro",
+ t:"Catálogo de autopeças com extração de PDFs de fabricantes",
+ s:"Extração de dados de catálogos em PDF de fabricantes de filtros e peças para um catálogo único, e um MVP de API de consulta.",
+ b:["Scripts de extração por fabricante, consolidação em CSV e API com domínio, serviço e infraestrutura separados."],
+ stack:"Python, SQLite, pytest",state:"MVP."},
+
+/* ---------------- ERP e fiscal ---------------- */
+{id:"sge",cats:["erp","destaque"],kind:"pro",feat:true,
+ t:"SGE: família de ERPs sob medida em Delphi (mais de 10 implantações)",
+ s:"Um produto-base de ERP customizado por cliente (\"customização de ERP em dias, não em semanas\"). Cada implantação herda o núcleo e ganha módulos próprios para o segmento.",
+ b:["Núcleo: vendas e compras, estoque, financeiro, comissões, NF-e, NFC-e, SAT, CT-e, SPED, boletos, TEF (SiTef), plano de contas e DRE, fluxo de caixa, etiquetas e inventário.","Segmentos atendidos: distribuição de alimentos, autopeças, materiais de construção, varejo de mercado, embalagens e descartáveis, papelaria, lubrificantes e serviços de oficina, locação de caçambas, controle de visitantes em feiras.","Porte das maiores implantações: autopeças (cerca de 1.700 unidades de código e 470 mil linhas), materiais de construção (1.750 unidades e 440 mil linhas), mercado (830 unidades e 300 mil linhas).","Manutenção de décadas de código: migração de bancos (Paradox para MySQL, SQL Server para PostgreSQL), nuvem e acesso remoto, atualização fiscal (NCM, CFOP, CSOSN, ICMS) e troca de equipamentos fiscais."],
+ stack:"Delphi 7, Zeos, MySQL, ACBr, SiTef, SAT, Lazarus/Free Pascal",state:"Em produção e evolução contínua."},
+{id:"modulos",cats:["erp"],kind:"pro",
+ t:"Módulos fiscais e de pagamento reutilizáveis",
+ s:"Módulos plugáveis nos ERPs: emissor de NF-e substituto, NFC-e, SAT, boleto e TEF.",
+ b:["Emissor de NF-e independente em Lazarus/ACBr com schemas XSD, controle de emissão e importação de nota por XML.","Integração SAT com variações para vários equipamentos; boleto e TEF (Software Express) como módulos separados."],
+ stack:"Lazarus, Free Pascal, Delphi, ACBr, XML/XSD",state:"Em produção."},
+{id:"db2sql",cats:["erp","dados"],kind:"pro",
+ t:"Db2Sql: ferramenta de conversão de bases legadas",
+ s:"Aplicativo em Delphi que automatiza a conversão de bases antigas (Paradox) para SQL, com log de conversão, usado na migração de vários clientes.",
+ stack:"Delphi, Paradox, MySQL",state:"Usado em migrações."},
+{id:"ncm",cats:["erp","dados"],kind:"pro",
+ t:"Atualização de NCM, CFOP, CSOSN e ICMS",
+ s:"Scripts que classificam produtos por NCM, geram a planilha da tabela vigente e o SQL de atualização para os bancos dos ERPs, com explicação fiscal para a contabilidade.",
+ stack:"Python, SQL, Excel",state:"Em uso."},
+{id:"python-utils",cats:["erp","dados"],kind:"pro",
+ t:"Utilitários em Python para fiscal, e-mail e dados",
+ s:"Conferência da soma de XMLs de NFC-e, disparo de e-mails com Amazon SES com verificação de reputação do IP, coleta de dados do IBGE, geocodificação, auditoria de logs e testes automatizados em executável.",
+ stack:"Python, MySQL, Amazon SES, PyInstaller",state:"Em uso."},
+
+/* ---------------- Mobile ---------------- */
+{id:"mobile-outros",cats:["mobile"],kind:"pro",
+ t:"Apps mobile (React Native e Expo)",
+ s:"Além dos apps do projeto de distribuição, aplicativos para consulta de CNPJs, indicadores de BI no celular e um app de carteirinha.",
+ b:["Consulta de CNPJs com backend em AdonisJS e carga de dados públicos da Receita.","BI mobile com gráficos (Highcharts) e API em Express/MySQL.","Builds com EAS e atualizações over-the-air."],
+ stack:"React Native, Expo, TypeScript, AdonisJS, Express",state:"Entregues."},
+{id:"figma",cats:["mobile","pessoal"],kind:"pes",
+ t:"Layout em Figma de um app para vendedor externo",
+ s:"Desenho de telas do app de venda em campo antes do desenvolvimento.",
+ stack:"Figma",state:"Layout pronto."},
+
+/* ---------------- Dados e BI ---------------- */
+{id:"bi",cats:["dados"],kind:"pro",
+ t:"Business Intelligence: Pentaho e Power BI",
+ s:"Data Warehouse, ETL e cubos OLAP com Pentaho sobre MySQL, e painéis em Power BI a partir de XMLs de NF-e.",
+ b:["Transformações Pentaho (.ktr) e conexões para consolidar dados de várias áreas.","Painéis Power BI, incluindo comparativo de custo de desenvolvimento interno versus terceirizado."],
+ stack:"Pentaho, MySQL, Power BI, SQL",state:"Em produção."},
+{id:"cnpj-etl",cats:["dados"],kind:"pro",
+ t:"ETL da base pública de CNPJ da Receita Federal",
+ s:"Carga dos dados abertos de empresas para um banco PostgreSQL próprio, que alimenta a prospecção do CRM e dos agentes.",
+ stack:"Python, PostgreSQL",state:"Em uso."},
+{id:"b3",cats:["pessoal","dados"],kind:"pes",
+ t:"Monitor de agentes em opções da B3",
+ s:"Lê em tempo real o servidor RTD do Profit e alerta (console, CSV, Telegram) quando um agente específico participa dos negócios de opções.",
+ stack:"Python, COM/RTD, YAML, Telegram",state:"Em uso."},
+{id:"corretagem",cats:["pessoal","dados"],kind:"pes",
+ t:"Lançamento automático de notas de corretagem e compras do mercado",
+ s:"Scripts que leem notas de corretagem em PDF e notas fiscais do mercado e preenchem planilhas e KPIs, operados por Telegram.",
+ stack:"Python, planilhas, Telegram",state:"Em uso."},
+
+/* ---------------- Pessoais e voluntariado ---------------- */
+{id:"avarias",cats:["pessoal","dados"],kind:"pes",
+ t:"Dashboard de avarias e manutenções (voluntariado)",
+ s:"Painel em uma única página HTML para acompanhar inspeções e manutenções de prédios de uma organização voluntária. Carrega a planilha localmente, sem servidor.",
+ b:["Indicadores: total, pendentes, taxa de conclusão e tempo médio.","Gráficos de evolução mensal, distribuição por item de inspeção, status por localidade e matriz de criticidade.","Filtros, tabela detalhada e exportação para Excel."],
+ stack:"HTML, JavaScript, Chart.js, SheetJS",state:"Em uso.",img:["img/dashboard-avarias.png","Painel de avarias com indicadores, gráficos e tabela (dados fictícios)"]},
+{id:"seguro",cats:["pessoal","dados"],kind:"pes",
+ t:"Tratamento do relatório do seguro de voluntários (voluntariado)",
+ s:"Ferramenta de uma página que importa a listagem de horas de trabalho voluntário exportada do sistema da entidade e aplica as regras do seguro, gerando o relatório final.",
+ b:["Regras configuráveis: idade mínima e máxima por tipo, função excluída da base e data de referência para o cálculo da idade.","Identifica unidades sem lançamentos no mês, cadastros sem data de nascimento e pessoas acima ou abaixo da idade.","Saída em Excel com sete abas e em PDF; configurações salvas no navegador, com os dados processados localmente."],
+ stack:"HTML, JavaScript, SheetJS, jsPDF",state:"Em uso.",img:["img/seguro-voluntarios.png","Relatório do seguro de voluntários com resumo, pendências e abas (dados fictícios)"]},
+{id:"remotion",cats:["pessoal"],kind:"pes",
+ t:"Vídeos educativos infantis programáticos (React e Remotion)",
+ s:"Dezenas de vídeos como código: cada vídeo é uma composição React com áudio sincronizado à letra.",
+ b:["Procedimento de sincronização áudio e letra com ffmpeg e whisper.cpp, que gera a composição já com os tempos.","Camada 3D opcional (CadQuery e Blender) integrada como uma camada normal."],
+ stack:"React, TypeScript, Remotion, ffmpeg, whisper.cpp, Blender",state:"Em produção contínua."},
+{id:"rplace",cats:["pessoal"],kind:"pes",
+ t:"Bot de pixel art para um canvas colaborativo",
+ s:"Desenha uma imagem respeitando as regras do projeto: um limitador único garante no máximo um pixel por cooldown, sem proxies e sem múltiplas instâncias.",
+ stack:"Python",state:"Concluído."},
+{id:"video-downloader",cats:["pessoal"],kind:"pes",
+ t:"Baixador de vídeo e áudio por URL",
+ s:"Utilitário que baixa vídeo (MP4) ou áudio (MP3) de uma URL com yt-dlp e ffmpeg, em ambiente virtual.",
+ stack:"Python, yt-dlp, ffmpeg",state:"Concluído."},
+
+/* ---------------- Open source ---------------- */
+{id:"oss-acbr",cats:["oss","erp"],kind:"oss",
+ t:"ACBr (Projeto ACBr) e Lazarus/Free Pascal",
+ s:"Uso extensivo das bibliotecas ACBr em NF-e, NFC-e, SAT, CT-e, boletos e TEF, em Delphi e Lazarus, incluindo a ferramenta de scripts do projeto.",
+ stack:"ACBr, Lazarus, Free Pascal, Delphi",state:"Uso em produção."},
+{id:"oss-t2ti",cats:["oss","erp"],kind:"oss",
+ t:"T2Ti ERP",
+ s:"Estudo do ERP de código aberto T2Ti (Lazarus) como referência de arquitetura e modelagem de módulos.",
+ stack:"Lazarus, Free Pascal",state:"Estudo."},
+{id:"oss-ia",cats:["oss","ia"],kind:"oss",
+ t:"Projetos abertos de IA",
+ s:"Experiência com MoneyPrinterTurbo (geração de vídeos curtos com IA), PicoClaw (assistente de IA em Go para hardware enxuto), OpenSquad (squads de agentes) e whisper.cpp (transcrição local).",
+ stack:"Python, Go, Docker, whisper.cpp",state:"Uso e experimentos."},
+{id:"oss-web",cats:["oss","web"],kind:"oss",
+ t:"Frameworks e ferramentas abertas",
+ s:"NestJS, Next.js, AdonisJS, Prisma, Remotion, Evolution API (WhatsApp), BullMQ, Socket.io, Pentaho e yt-dlp em projetos reais.",
+ stack:"TypeScript, Node.js, Java",state:"Uso em produção."}
+];
+
+/* ---------- estatísticas ---------- */
+var STATS = [
+  ["15 anos","de experiência em software"],
+  ["10+","implantações de ERP sob medida"],
+  ["19","agentes de IA e automação"],
+  ["30+","clientes ativos no CRM"],
+  ["~500","conversas de WhatsApp por mês"]
+];
+
+/* ---------- renderização ---------- */
+var state = {cat:"todos", q:""};
+function el(tag, cls, html){ var e=document.createElement(tag); if(cls) e.className=cls; if(html!=null) e.innerHTML=html; return e; }
+function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+
+function renderStats(){
+  var box=document.getElementById("stats");
+  STATS.forEach(function(s){ box.appendChild(el("div","stat","<b>"+esc(s[0])+"</b><span>"+esc(s[1])+"</span>")); });
+}
+function renderChips(){
+  var box=document.getElementById("chips");
+  CATS.forEach(function(c){
+    var b=el("button","chip",esc(c[1])); b.type="button"; b.setAttribute("aria-pressed", String(c[0]===state.cat));
+    b.addEventListener("click",function(){ state.cat=c[0]; renderChips2(); render(); });
+    b.dataset.cat=c[0]; box.appendChild(b);
+  });
+}
+function renderChips2(){
+  document.querySelectorAll("#chips .chip").forEach(function(b){ b.setAttribute("aria-pressed", String(b.dataset.cat===state.cat)); });
+}
+function card(p){
+  var k=KIND[p.kind];
+  var c=el("article","card"+(p.feat?" feat":""));
+  c.appendChild(el("div","tags",'<span class="tag '+k[1]+'">'+k[0]+'</span>'));
+  c.appendChild(el("h3",null,esc(p.t)));
+  c.appendChild(el("p",null,esc(p.s)));
+  if(p.flow){
+    var f=el("div","flow");
+    p.flow.forEach(function(x,i){ if(i) f.appendChild(el("span","arr","&rarr;")); f.appendChild(el("div","box",esc(x))); });
+    c.appendChild(f);
+  }
+  if(p.b && p.b.length){
+    var d=el("details"); if(p.feat) d.open=true;
+    d.appendChild(el("summary",null,"Detalhes"));
+    var ul=el("ul"); p.b.forEach(function(x){ ul.appendChild(el("li",null,esc(x))); });
+    d.appendChild(ul); c.appendChild(d);
+  }
+  if(p.img){ var fg=el("figure","shot"); var im=el("img"); im.src=p.img[0]; im.alt=p.img[1]; im.loading="lazy"; fg.appendChild(im); fg.appendChild(el("figcaption",null,esc(p.img[1]))); c.appendChild(fg); }
+  if(p.stack) c.appendChild(el("div","stack","<b>Stack:</b> "+esc(p.stack)));
+  if(p.state) c.appendChild(el("div","state",esc(p.state)));
+  return c;
+}
+function matches(p){
+  if(state.cat!=="todos" && p.cats.indexOf(state.cat)<0) return false;
+  if(!state.q) return true;
+  var hay=(p.t+" "+p.s+" "+(p.b||[]).join(" ")+" "+(p.stack||"")).toLowerCase();
+  return hay.indexOf(state.q)>=0;
+}
+function render(){
+  var out=document.getElementById("out"); out.innerHTML="";
+  var list=P.filter(matches);
+  document.getElementById("empty").style.display=list.length?"none":"block";
+  if(state.cat==="todos" && !state.q){
+    var groups=[["destaque","Destaques","Os projetos que melhor mostram o que eu construo."],["ia","Agentes e IA","Agentes com ferramentas de escopo fechado, aprovação humana, auditoria e custo controlado."],["web","Web e SaaS","Produtos construídos do zero."],["erp","ERP e fiscal","Software de gestão sob medida e módulos fiscais."],["mobile","Mobile","Apps que funcionam offline no campo."],["dados","Dados e BI","Pentaho, Power BI, ETL e automações de dados."],["oss","Open source","Projetos abertos conhecidos que uso e estudo."],["pessoal","Pessoais e voluntariado","Projetos por interesse próprio e trabalho voluntário."]];
+    var shown={};
+    groups.forEach(function(g){
+      var items=list.filter(function(p){ return !shown[p.id] && (g[0]==="destaque" ? p.cats.indexOf("destaque")>=0 : p.cats[0]===g[0]); });
+      if(!items.length) return;
+      out.appendChild(el("h2","sec",esc(g[1]))); out.appendChild(el("p","secsub",esc(g[2])));
+      var grid=el("div","grid"); items.forEach(function(p){ shown[p.id]=1; grid.appendChild(card(p)); }); out.appendChild(grid);
+    });
+  } else {
+    var grid=el("div","grid"); list.forEach(function(p){ grid.appendChild(card(p)); }); out.appendChild(grid);
+  }
+}
+document.getElementById("q").addEventListener("input",function(e){ state.q=e.target.value.trim().toLowerCase(); render(); });
+
+/* tema */
+(function(){
+  var root=document.documentElement, btn=document.getElementById("themeBtn");
+  try{ var t=localStorage.getItem("tema"); if(t) root.setAttribute("data-theme",t); }catch(e){}
+  btn.addEventListener("click",function(){
+    var cur=root.getAttribute("data-theme");
+    var dark = cur ? cur==="dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var next = dark ? "light" : "dark";
+    root.setAttribute("data-theme",next);
+    try{ localStorage.setItem("tema",next); }catch(e){}
+  });
+})();
+
+renderStats(); renderChips(); render();
+</script>
+</body>
+</html>
