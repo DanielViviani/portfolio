@@ -1,13 +1,13 @@
 # Daniel Schincaglia Viviani
 
+**Ver o portfólio interativo (filtros e busca): https://danielviviani.github.io/portfolio/**
+
 **Tech Lead Full Stack & Inteligência Artificial** · São Paulo - SP
 [LinkedIn](https://www.linkedin.com/in/danielviviani/) · contato.danielviviani@gmail.com
 
 15 anos construindo software que opera de verdade: ERP sob medida para distribuição e varejo, CRM com WhatsApp, apps mobile, BI e agentes de IA integrados a sistemas reais. Uso IA onde ela agrega, código determinístico onde precisa de exatidão e aprovação humana onde há risco.
 
 > Nomes de clientes e dados internos foram omitidos. O código de projetos de clientes é privado e pode ser demonstrado sob NDA.
-
-**Versão interativa (filtros e busca):** abra [`index.html`](index.html) ou a página publicada deste repositório.
 
 ## Destaques
 
