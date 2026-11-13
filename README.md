@@ -49,5 +49,9 @@ Dashboard de avarias e manutenções · Tratamento do relatório do seguro de vo
 ## Open source
 ACBr e Lazarus/Free Pascal · T2Ti ERP · MoneyPrinterTurbo, PicoClaw, OpenSquad e whisper.cpp · NestJS, Next.js, AdonisJS, Prisma, Remotion, Evolution API, BullMQ, Socket.io, Pentaho
 
+## Formação contínua em IA
+- Formação Engenheiro de IA Generativa 2026: IA na Prática (Udemy, 103 horas, nov/2026)
+- Introduction to Model Context Protocol (Anthropic, abr/2026) · [verificar certificado](https://verify.skilljar.com/c/yu9qjf6bfv55)
+
 ## Como eu trabalho
 Especificação viva (SDD) antes do código · TDD com testes de segurança · CI/CD em estágios rápidos · regras por projeto em `CLAUDE.md` · auditoria e limite de custo nos agentes · memória compartilhada da equipe com ai-memory.
